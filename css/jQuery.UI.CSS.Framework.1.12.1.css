@@ -1,0 +1,3269 @@
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/
+ */
+
+/*
+
+
+
+
+
+
+ */
+
+
+
+/* Component containers
+----------------------------------*/
+
+.ui-widget {
+	font-family: Arial,Helvetica,sans-serif/*{ffDefault}*/;
+	font-size: 1em/*{fsDefault}*/;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Arial,Helvetica,sans-serif/*{ffDefault}*/;
+	font-size: 1em;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd/*{borderColorContent}*/;
+	background: #ffffff/*{bgColorContent}*/ /*{bgImgUrlContent}*/ /*{bgContentXPos}*/ /*{bgContentYPos}*/ /*{bgContentRepeat}*/;
+	color: #333333/*{fcContent}*/;
+}
+.ui-widget-content a {
+	color: #333333/*{fcContent}*/;
+}
+.ui-widget-header {
+	border: 1px solid #dddddd/*{borderColorHeader}*/;
+	background: #e9e9e9/*{bgColorHeader}*/ /*{bgImgUrlHeader}*/ /*{bgHeaderXPos}*/ /*{bgHeaderYPos}*/ /*{bgHeaderRepeat}*/;
+	color: #333333/*{fcHeader}*/;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #333333/*{fcHeader}*/;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+	background: #f6f6f6/*{bgColorDefault}*/ /*{bgImgUrlDefault}*/ /*{bgDefaultXPos}*/ /*{bgDefaultYPos}*/ /*{bgDefaultRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #454545/*{fcDefault}*/;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+	color: #454545/*{fcDefault}*/;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	border: 1px solid #cccccc/*{borderColorHover}*/;
+	background: #ededed/*{bgColorHover}*/ /*{bgImgUrlHover}*/ /*{bgHoverXPos}*/ /*{bgHoverYPos}*/ /*{bgHoverRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #2b2b2b/*{fcHover}*/;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited,
+a.ui-button:hover,
+a.ui-button:focus {
+	color: #2b2b2b/*{fcHover}*/;
+	text-decoration: none;
+}
+
+.ui-visual-focus {
+	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #003eff/*{borderColorActive}*/;
+	background: #007fff/*{bgColorActive}*/ /*{bgImgUrlActive}*/ /*{bgActiveXPos}*/ /*{bgActiveYPos}*/ /*{bgActiveRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #ffffff/*{fcActive}*/;
+}
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+	border: #003eff/*{borderColorActive}*/;
+	background-color: #ffffff/*{fcActive}*/;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #ffffff/*{fcActive}*/;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid #dad55e/*{borderColorHighlight}*/;
+	background: #fffa90/*{bgColorHighlight}*/ /*{bgImgUrlHighlight}*/ /*{bgHighlightXPos}*/ /*{bgHighlightYPos}*/ /*{bgHighlightRepeat}*/;
+	color: #777620/*{fcHighlight}*/;
+}
+.ui-state-checked {
+	border: 1px solid #dad55e/*{borderColorHighlight}*/;
+	background: #fffa90/*{bgColorHighlight}*/;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+	color: #777620/*{fcHighlight}*/;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	border: 1px solid #f1a899/*{borderColorError}*/;
+	background: #fddfdf/*{bgColorError}*/ /*{bgImgUrlError}*/ /*{bgErrorXPos}*/ /*{bgErrorYPos}*/ /*{bgErrorRepeat}*/;
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70); /* support: IE8 */
+	font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35); /* support: IE8 */
+	background-image: none;
+}
+.ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	width: 16px;
+	height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_444444_256x240-31d988765b4e6f56553c29588c500381dc3e6f0aa2980c8212202e5644aefd5d.png)/*{iconsContent}*/;
+}
+.ui-widget-header .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_444444_256x240-31d988765b4e6f56553c29588c500381dc3e6f0aa2980c8212202e5644aefd5d.png)/*{iconsHeader}*/;
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-button:hover .ui-icon,
+.ui-button:focus .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_555555_256x240-32175261daee76c82bb0edf0eea16a56421866fbc31e94f3c1d570aa114502f5.png)/*{iconsHover}*/;
+}
+.ui-state-active .ui-icon,
+.ui-button:active .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_ffffff_256x240-350df1b7131037de20e83c5c0f3a41a770d2ac48b5762ea772b3f4a8a7b9d47a.png)/*{iconsActive}*/;
+}
+.ui-state-highlight .ui-icon,
+.ui-button .ui-state-highlight.ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_777620_256x240-0b020fc6e696d88d296e7bb1f61f1eb2ad827848e2c7382a4c3e0999e702dd9b.png)/*{iconsHighlight}*/;
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_cc0000_256x240-40985a64b4d5dd213fba27fcd862a1bd1b337a97674f6ff0b9ec20abcee4bc69.png)/*{iconsError}*/;
+}
+.ui-button .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_777777_256x240-faf32007ae120c302213557626e660dd10e711c5dd4f1113d35f26dc05b78d2f.png)/*{iconsDefault}*/;
+}
+
+/* positioning */
+.ui-icon-blank { background-position: 16px 16px; }
+.ui-icon-caret-1-n { background-position: 0 0; }
+.ui-icon-caret-1-ne { background-position: -16px 0; }
+.ui-icon-caret-1-e { background-position: -32px 0; }
+.ui-icon-caret-1-se { background-position: -48px 0; }
+.ui-icon-caret-1-s { background-position: -65px 0; }
+.ui-icon-caret-1-sw { background-position: -80px 0; }
+.ui-icon-caret-1-w { background-position: -96px 0; }
+.ui-icon-caret-1-nw { background-position: -112px 0; }
+.ui-icon-caret-2-n-s { background-position: -128px 0; }
+.ui-icon-caret-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -65px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -65px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 1px -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-on { background-position: -96px -144px; }
+.ui-icon-radio-off { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 3px/*{cornerRadius}*/;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	background: #aaaaaa/*{bgColorOverlay}*/ /*{bgImgUrlOverlay}*/ /*{bgOverlayXPos}*/ /*{bgOverlayYPos}*/ /*{bgOverlayRepeat}*/;
+	opacity: .3/*{opacityOverlay}*/;
+	filter: Alpha(Opacity=30)/*{opacityFilterOverlay}*/; /* support: IE8 */
+}
+.ui-widget-shadow {
+	-webkit-box-shadow: 0/*{offsetLeftShadow}*/ 0/*{offsetTopShadow}*/ 5px/*{thicknessShadow}*/ #666666/*{bgColorShadow}*/;
+	box-shadow: 0/*{offsetLeftShadow}*/ 0/*{offsetTopShadow}*/ 5px/*{thicknessShadow}*/ #666666/*{bgColorShadow}*/;
+}
+/*!
+ * jQuery UI Autocomplete 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/autocomplete/#theming
+ */
+/*
+
+ */
+
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+/*!
+ * jQuery UI Menu 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/menu/#theming
+ */
+/*
+
+ */
+
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: 0;
+}
+.ui-menu .ui-menu {
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	margin: 0;
+	cursor: pointer;
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 3px 1em 3px .4em;
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item-wrapper {
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: .2em;
+	margin: auto 0;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	left: auto;
+	right: 0;
+}
+/* Colors */
+/* Fonts */
+/* Mixins */
+/* line 3, /app/app/assets/stylesheets/shared/flash.scss */
+#flash_wrapper {
+  position: fixed;
+  top: 28px;
+  z-index: 1005;
+  text-align: center;
+  text-align: -moz-center;
+  width: 980px;
+}
+
+/* line 12, /app/app/assets/stylesheets/shared/flash.scss */
+.flash-notice, .flash-error, .flash-pending {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 2px 2px 2px #ccc;
+  -webkit-box-shadow: 2px 2px 2px #ccc;
+  box-shadow: 2px 2px 2px #ccc;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  padding-left: 32px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* line 25, /app/app/assets/stylesheets/shared/flash.scss */
+.flash-notice {
+  background-color: #84C253;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxNTkyN0ExNkUxMDMxMUUxQURFQkI3NDY2MjE0Nzc4QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxNTkyN0ExN0UxMDMxMUUxQURFQkI3NDY2MjE0Nzc4QSI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk4QkNERDY3RTBGRjExRTFBREVCQjc0NjYyMTQ3NzhBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk4QkNERDY4RTBGRjExRTFBREVCQjc0NjYyMTQ3NzhBIi8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2BcYb65wAAANxJREFUeNpi%2FP%2F%2FPysDA4MEEDMzkAfeA%2FFHRqBBJ4AMcwbywX8g5gEZ9J%2BBciDGxEAdwEiqQddxSZBi0CYg1gHiSmi4oIUUceAiEPOAghOKZ6DJixFj0EsglkcyxAmIfxNr0CYg%2FgHEP4HYCskQVSB%2Bh0U9VoPWATEoWVgAcRiSIQJAfAOHxRgGfQBifiTNMMwMxLvweB%2Bri%2FYBsSCaQZMJhCPOMLoJxOpQQzKIiBC8sfYeiCuxxBBWg6iV18SpldfAWeQ9Fcz5zQIkYoC4GogFyDEAiPcC8QeAAAMAFboyYeU21swAAAAASUVORK5CYII%3D);
+  border: solid 1px #567e35;
+  color: white;
+}
+
+/* line 32, /app/app/assets/stylesheets/shared/flash.scss */
+.flash-error {
+  background-color: #FF404B;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAOCAIAAABCerDeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBRjBBRkNFQkUxMDMxMUUxQURFQkI3NDY2MjE0Nzc4QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBRjBBRkNFQ0UxMDMxMUUxQURFQkI3NDY2MjE0Nzc4QSI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE1OTI3QTIwRTEwMzExRTFBREVCQjc0NjYyMTQ3NzhBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFGMEFGQ0VBRTEwMzExRTFBREVCQjc0NjYyMTQ3NzhBIi8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2B%2FBXIAwAAAaFJREFUeNp8kk1LG1EUhp87M1IzCUrQ1EK1IBWE0gjVuqiE1IIfWJUExc8EW6w7wT%2Fgrks3broouPJPuHGliGCpG10piCIISqEY1MZoZk5nSC3DjfrAXZ37nvOe914lnf0EEVCCHWZylMQ7vn3nxzaGQRmGLvOwLPq66f2AuHzO0thIsfiosiTz2r9PMD7MyirzXyn8YW6GWC1O8QFlSeb5fNXM1DhVEc7OODrm%2FIL4a9Ipnth3l%2B6ZKUSjfJniRQOOi2lhmSioqGBkkK4kbrnSTwVCIYZSvIkHPNxRWcmnCVpacJyA8l8qJh97GEtzL17fuqfMTtPwnKITmOmt1%2F6WzIhvLGg%2BOFkpml4yMUp1Fa5bminU1zOdpSYauGcQtrEjvs%2F%2FeL68p0r3%2BxH4rYeysr4hGq4rxyey9VNyOb10eSULi5LsMxhOkejQF7u5ZW2TpWUODvWSHSIzRlurId2d%2Fg46wnWei0sKN2VpKWIx2lsttbdPJFwmFAZ6SHbwLEY%2Br5d%2B59jZVZLK%2BHFpb%2BAd08RSFBz%2F92rcFjj99VeAAQDo4p7S2%2BNDFgAAAABJRU5ErkJggg%3D%3D);
+  color: white;
+}
+
+/* line 38, /app/app/assets/stylesheets/shared/flash.scss */
+.flash-pending {
+  background-color: #FFF9CD;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxNTkyN0ExRUUxMDMxMUUxQURFQkI3NDY2MjE0Nzc4QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxNTkyN0ExRkUxMDMxMUUxQURFQkI3NDY2MjE0Nzc4QSI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE1OTI3QTFDRTEwMzExRTFBREVCQjc0NjYyMTQ3NzhBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE1OTI3QTFERTEwMzExRTFBREVCQjc0NjYyMTQ3NzhBIi8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2BlulrFAAAAUlJREFUeNqklL9KA0EQh%2FfUIgSsbBILK4V0AVsDQe3zBhFCXsDGJ8gLmC5FOt%2FCLqCVpIqFkEoUUWNhI%2F7P5hv4BTeXuzPiwHfLzfxmbrM7E%2Be9dyFYEY6gB4%2FwqrUnf3EuJ1agCQ%2FgxTUM4CbwWbyZWARrSTSGNpQhp1getuUfS9eaKYI1FLiHqnxr%2BgkHsd1WpbOXhnyuAE%2FwDpVAvCfhScK5VaS3vMISj7q%2B2kFw5n7sW%2BuHi5l0HeXVrUhNX%2By6v1lXeTUrUoI7GKaIv1L8Q%2BWVVnis2rWxxbcU8UYURbusyyp4gfbF9Pifed800Qhup9cZHN5%2B0Bshh4rnlDeynVzBDmypsabWh2Pt9BMiHfKp4qZfh3OnVrbS7fhVZqHG88pP7pNfCsz0SWrHZhSY79iM2bFZyS88OxlTbNN7ufAU%2F%2Bf%2FZCLAAOlrcWKwAdByAAAAAElFTkSuQmCC);
+  border: solid 1px #F0C36D;
+}
+/* Colors */
+/* Fonts */
+/* Mixins */
+/** Buttons **/
+/* line 89, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 98, /app/app/assets/stylesheets/shared/button.scss */
+.small-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 12px;
+  font-size: 11px;
+  line-height: 15px;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.small-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.small-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 105, /app/app/assets/stylesheets/shared/button.scss */
+.large-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 6px 20px;
+  font-size: 13px;
+  line-height: 19px;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.large-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.large-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 112, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 21px;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 119, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 9px 20px;
+  color: white !important;
+  border: none !important;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#508828), to(#508828));
+  background-image: -webkit-linear-gradient(top, #508828, #508828);
+  background-image: -moz-linear-gradient(top, #508828, #508828);
+  background-image: -ms-linear-gradient(top, #508828, #508828);
+  background-image: -o-linear-gradient(top, #508828, #508828);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF508828", endColorstr="#FF508828");
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 130, /app/app/assets/stylesheets/shared/button.scss */
+.link-like-button {
+  font-weight: 300;
+  background-color: transparent;
+  border: 0px;
+  color: #118bd9;
+  font-size: 13px;
+  cursor: pointer;
+  -moz-box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.3);
+  padding: 0px;
+  margin-right: 0px;
+  margin-bottom: 2px;
+  margin-left: 0;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 144, /app/app/assets/stylesheets/shared/button.scss */
+.link-like-button:hover {
+  text-decoration: underline;
+}
+
+/* line 3, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.s3-upload-form {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* line 9, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.progress-bar {
+  display: none;
+}
+/* line 11, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.progress-bar .upload {
+  border: none;
+  margin: 0;
+}
+/* line 14, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.progress-bar .upload .progress {
+  margin: 0;
+  border-radius: 0;
+}
+/* line 17, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.progress-bar .upload .progress .bar {
+  height: 8px;
+  width: 397px;
+}
+
+/* line 26, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.attach-or-paste a.remove {
+  margin-left: 5px;
+  display: none;
+}
+/* line 31, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.attach-or-paste .chosen {
+  display: none;
+}
+@media (min-width: 641px) {
+  /* line 36, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+  .attach-or-paste .link-container a:not(:last-child)::after {
+    content: ",";
+  }
+}
+@media (max-width: 640px) {
+  /* line 42, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+  .attach-or-paste .link-container a {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 600;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+    background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+    background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+    background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+    background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+    border: solid 1px #ddd !important;
+    color: #465335 !important;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 20px;
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 1em;
+  }
+  /* line 22, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a:hover {
+    text-decoration: none;
+  }
+  /* line 26, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a:active:not(.disabled-button) {
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  /* line 30, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.disabled-button {
+    color: #b9b9b9 !important;
+    cursor: default !important;
+  }
+  /* line 34, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.disabled-button.primary-button {
+    color: #bee1fa !important;
+  }
+  /* line 39, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.add-button:before {
+    content: "+\00A0";
+    font-size: 22px;
+    vertical-align: top;
+  }
+  /* line 45, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.checked-button:before {
+    content: "\2713\00a0\00a0";
+    font-size: 16px;
+    vertical-align: top;
+  }
+  /* line 52, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.primary-button {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+    background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+    background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+    background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+    background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+    color: white !important;
+  }
+  /* line 57, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.orange-button {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+    background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+    background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+    background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+    background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+    border: solid 1px #ff7f0e !important;
+    color: white !important;
+  }
+  /* line 62, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.orange-button:hover {
+    background: #ff7f0e;
+  }
+  /* line 67, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.green-button {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+    background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+    background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+    background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+    background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+    border-color: #b6c7a6 !important;
+    color: white !important;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  /* line 74, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.file-button {
+    padding-left: 10px;
+  }
+  /* line 77, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a.file-button:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+    float: left;
+    display: block;
+    margin-top: 2px;
+    margin-right: 8px;
+    height: 16px;
+    width: 13px;
+  }
+  /* line 158, /app/app/assets/stylesheets/shared/button.scss */
+  .attach-or-paste .link-container a:active, .attach-or-paste .link-container a.active {
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  /* line 46, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+  .attach-or-paste .button {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* line 53, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.error {
+  color: red;
+}
+
+/* line 57, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.upload {
+  display: inline-block;
+  border-top: solid 1px #CCC;
+  width: 300px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+/* line 64, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.upload .progress {
+  margin-top: 8px;
+  border: solid 1px #555;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+/* line 69, /app/app/assets/stylesheets/shared/helper/attach_or_paste_control.scss */
+.upload .progress .bar {
+  height: 10px;
+  background: #3EC144;
+}
+
+
+
+/*
+Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
+*/
+
+.select2-container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    /* inline-block for ie7 */
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+.select2-container,
+.select2-drop,
+.select2-search,
+.select2-search input {
+  /*
+    Force border-box so that % widths fit the parent
+    container without overlap because of margin/padding.
+
+    More Info : http://www.quirksmode.org/css/box.html
+  */
+  -webkit-box-sizing: border-box; /* webkit */
+     -moz-box-sizing: border-box; /* firefox */
+          box-sizing: border-box; /* css3 */
+}
+
+.select2-container .select2-choice {
+    display: block;
+    height: 26px;
+    padding: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+
+    border: 1px solid #aaa;
+    white-space: nowrap;
+    line-height: 26px;
+    color: #444;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+    background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+    background-image: linear-gradient(top, #fff 0%, #eee 50%);
+}
+
+.select2-container.select2-drop-above .select2-choice {
+    border-bottom-color: #aaa;
+
+    border-radius: 0 0 4px 4px;
+
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.9, #fff));
+    background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 90%);
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    background-image: linear-gradient(top, #eee 0%, #fff 90%);
+}
+
+.select2-container.select2-allowclear .select2-choice .select2-chosen {
+    margin-right: 42px;
+}
+
+.select2-container .select2-choice > .select2-chosen {
+    margin-right: 26px;
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.select2-container .select2-choice abbr {
+    display: none;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 24px;
+    top: 8px;
+
+    font-size: 1px;
+    text-decoration: none;
+
+    border: 0;
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) right top no-repeat;
+    cursor: pointer;
+    outline: 0;
+}
+
+.select2-container.select2-allowclear .select2-choice abbr {
+    display: inline-block;
+}
+
+.select2-container .select2-choice abbr:hover {
+    background-position: right -11px;
+    cursor: pointer;
+}
+
+.select2-drop-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 9998;
+    /* styles required for IE to work */
+    background-color: #fff;
+    filter: alpha(opacity=0);
+}
+
+.select2-drop {
+    width: 100%;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+    border-top: 0;
+
+    border-radius: 0 0 4px 4px;
+
+    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+            box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+}
+
+.select2-drop-auto-width {
+    border-top: 1px solid #aaa;
+    width: auto;
+}
+
+.select2-drop-auto-width .select2-search {
+    padding-top: 4px;
+}
+
+.select2-drop.select2-drop-above {
+    margin-top: 1px;
+    border-top: 1px solid #aaa;
+    border-bottom: 0;
+
+    border-radius: 4px 4px 0 0;
+
+    -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
+            box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
+}
+
+.select2-drop-active {
+    border: 1px solid #5897fb;
+    border-top: none;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+    border-top: 1px solid #5897fb;
+}
+
+.select2-container .select2-choice .select2-arrow {
+    display: inline-block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-left: 1px solid #aaa;
+    border-radius: 0 4px 4px 0;
+
+    background-clip: padding-box;
+
+    background: #ccc;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
+    background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+    background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0);
+    background-image: linear-gradient(top, #ccc 0%, #eee 60%);
+}
+
+.select2-container .select2-choice .select2-arrow b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 0 1px;
+}
+
+.select2-search {
+    display: inline-block;
+    width: 100%;
+    min-height: 26px;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    position: relative;
+    z-index: 10000;
+
+    white-space: nowrap;
+}
+
+.select2-search input {
+    width: 100%;
+    height: auto !important;
+    min-height: 26px;
+    padding: 4px 20px 4px 5px;
+    margin: 0;
+
+    outline: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+
+    border: 1px solid #aaa;
+    border-radius: 0;
+
+    -webkit-box-shadow: none;
+            box-shadow: none;
+
+    background: #fff url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px;
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, linear-gradient(top, #fff 85%, #eee 99%);
+}
+
+.select2-drop.select2-drop-above .select2-search input {
+    margin-top: 4px;
+}
+
+.select2-search input.select2-active {
+    background: #fff url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%;
+    background: url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, linear-gradient(top, #fff 85%, #eee 99%);
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    border: 1px solid #5897fb;
+    outline: none;
+
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+.select2-dropdown-open .select2-choice {
+    border-bottom-color: transparent;
+    -webkit-box-shadow: 0 1px 0 #fff inset;
+            box-shadow: 0 1px 0 #fff inset;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fff), color-stop(0.5, #eee));
+    background-image: -webkit-linear-gradient(center bottom, #fff 0%, #eee 50%);
+    background-image: -moz-linear-gradient(center bottom, #fff 0%, #eee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
+    background-image: linear-gradient(top, #fff 0%, #eee 50%);
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+    border: 1px solid #5897fb;
+    border-top-color: transparent;
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #eee));
+    background-image: -webkit-linear-gradient(center top, #fff 0%, #eee 50%);
+    background-image: -moz-linear-gradient(center top, #fff 0%, #eee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
+    background-image: linear-gradient(bottom, #fff 0%, #eee 50%);
+}
+
+.select2-dropdown-open .select2-choice .select2-arrow {
+    background: transparent;
+    border-left: none;
+    filter: none;
+}
+.select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -18px 1px;
+}
+
+/* results */
+.select2-results {
+    max-height: 200px;
+    padding: 0 0 0 4px;
+    margin: 4px 4px 4px 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.select2-results ul.select2-result-sub {
+    margin: 0;
+    padding-left: 0;
+}
+
+.select2-results ul.select2-result-sub > li .select2-result-label { padding-left: 20px }
+.select2-results ul.select2-result-sub ul.select2-result-sub > li .select2-result-label { padding-left: 40px }
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label { padding-left: 60px }
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label { padding-left: 80px }
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label { padding-left: 100px }
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label { padding-left: 110px }
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label { padding-left: 120px }
+
+.select2-results li {
+    list-style: none;
+    display: list-item;
+    background-image: none;
+}
+
+.select2-results li.select2-result-with-children > .select2-result-label {
+    font-weight: bold;
+}
+
+.select2-results .select2-result-label {
+    padding: 3px 7px 4px;
+    margin: 0;
+    cursor: pointer;
+
+    min-height: 1em;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.select2-results .select2-highlighted {
+    background: #3875d7;
+    color: #fff;
+}
+
+.select2-results li em {
+    background: #feffde;
+    font-style: normal;
+}
+
+.select2-results .select2-highlighted em {
+    background: transparent;
+}
+
+.select2-results .select2-highlighted ul {
+    background: #fff;
+    color: #000;
+}
+
+
+.select2-results .select2-no-results,
+.select2-results .select2-searching,
+.select2-results .select2-selection-limit {
+    background: #f4f4f4;
+    display: list-item;
+}
+
+/*
+disabled look for disabled choices in the results dropdown
+*/
+.select2-results .select2-disabled.select2-highlighted {
+    color: #666;
+    background: #f4f4f4;
+    display: list-item;
+    cursor: default;
+}
+.select2-results .select2-disabled {
+  background: #f4f4f4;
+  display: list-item;
+  cursor: default;
+}
+
+.select2-results .select2-selected {
+    display: none;
+}
+
+.select2-more-results.select2-active {
+    background: #f4f4f4 url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%;
+}
+
+.select2-more-results {
+    background: #f4f4f4;
+    display: list-item;
+}
+
+/* disabled styles */
+
+.select2-container.select2-container-disabled .select2-choice {
+    background-color: #f4f4f4;
+    background-image: none;
+    border: 1px solid #ddd;
+    cursor: default;
+}
+
+.select2-container.select2-container-disabled .select2-choice .select2-arrow {
+    background-color: #f4f4f4;
+    background-image: none;
+    border-left: 0;
+}
+
+.select2-container.select2-container-disabled .select2-choice abbr {
+    display: none;
+}
+
+
+/* multiselect */
+
+.select2-container-multi .select2-choices {
+    height: auto !important;
+    height: 1%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    border: 1px solid #aaa;
+    cursor: text;
+    overflow: hidden;
+
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff));
+    background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%);
+    background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%);
+    background-image: linear-gradient(top, #eee 1%, #fff 15%);
+}
+
+.select2-locked {
+  padding: 3px 5px 3px 5px !important;
+}
+
+.select2-container-multi .select2-choices {
+    min-height: 26px;
+}
+
+.select2-container-multi.select2-container-active .select2-choices {
+    border: 1px solid #5897fb;
+    outline: none;
+
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+.select2-container-multi .select2-choices li {
+    float: left;
+    list-style: none;
+}
+.select2-container-multi .select2-choices .select2-search-field {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+    padding: 5px;
+    margin: 1px 0;
+
+    font-family: sans-serif;
+    font-size: 100%;
+    color: #666;
+    outline: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: transparent !important;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+    background: #fff url(/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100% !important;
+}
+
+.select2-default {
+    color: #999 !important;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {
+    padding: 3px 5px 3px 18px;
+    margin: 3px 0 3px 5px;
+    position: relative;
+
+    line-height: 13px;
+    color: #333;
+    cursor: default;
+    border: 1px solid #aaaaaa;
+
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+
+    background-color: #e4e4e4;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eee));
+    background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+}
+.select2-container-multi .select2-choices .select2-search-choice .select2-chosen {
+    cursor: default;
+}
+.select2-container-multi .select2-choices .select2-search-choice-focus {
+    background: #d4d4d4;
+}
+
+.select2-search-choice-close {
+    display: block;
+    width: 12px;
+    height: 13px;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+
+    font-size: 1px;
+    outline: none;
+    background: url(/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) right top no-repeat;
+}
+
+.select2-container-multi .select2-search-choice-close {
+    left: 3px;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
+  background-position: right -11px;
+}
+.select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
+    background-position: right -11px;
+}
+
+/* disabled styles */
+.select2-container-multi.select2-container-disabled .select2-choices {
+    background-color: #f4f4f4;
+    background-image: none;
+    border: 1px solid #ddd;
+    cursor: default;
+}
+
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ddd;
+    background-image: none;
+    background-color: #f4f4f4;
+}
+
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice .select2-search-choice-close {    display: none;
+    background: none;
+}
+/* end multiselect */
+
+
+.select2-result-selectable .select2-match,
+.select2-result-unselectable .select2-match {
+    text-decoration: underline;
+}
+
+.select2-offscreen, .select2-offscreen:focus {
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    outline: 0 !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.select2-display-none {
+    display: none;
+}
+
+.select2-measure-scrollbar {
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+/* Retina-ize icons */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)  {
+  .select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice .select2-arrow b {
+      background-image: url(/assets/select2x2-6fe28d687dc0ed4d96016238c608ba1e7198c9c9accfa0b360b78018b9fb9bc2.png) !important;
+      background-repeat: no-repeat !important;
+      background-size: 60px 40px !important;
+  }
+  .select2-search input {
+      background-position: 100% -21px !important;
+  }
+}
+/*
+ *
+ *
+ */
+/* Colors */
+/* Fonts */
+/* Mixins */
+/* Colors */
+/* Fonts */
+/* Mixins */
+/** Buttons **/
+/* line 89, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.tiny-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 98, /app/app/assets/stylesheets/shared/button.scss */
+.small-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 12px;
+  font-size: 11px;
+  line-height: 15px;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.small-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.small-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.small-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 105, /app/app/assets/stylesheets/shared/button.scss */
+.large-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 6px 20px;
+  font-size: 13px;
+  line-height: 19px;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.large-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.large-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.large-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 112, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 21px;
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.xlarge-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 119, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+  background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+  border: solid 1px #ddd !important;
+  color: #465335 !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 9px 20px;
+  color: white !important;
+  border: none !important;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#508828), to(#508828));
+  background-image: -webkit-linear-gradient(top, #508828, #508828);
+  background-image: -moz-linear-gradient(top, #508828, #508828);
+  background-image: -ms-linear-gradient(top, #508828, #508828);
+  background-image: -o-linear-gradient(top, #508828, #508828);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF508828", endColorstr="#FF508828");
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 22, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button:hover {
+  text-decoration: none;
+}
+/* line 26, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button:active:not(.disabled-button) {
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* line 30, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.disabled-button {
+  color: #b9b9b9 !important;
+  cursor: default !important;
+}
+/* line 34, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.disabled-button.primary-button {
+  color: #bee1fa !important;
+}
+/* line 39, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.add-button:before {
+  content: "+\00A0";
+  font-size: 22px;
+  vertical-align: top;
+}
+/* line 45, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.checked-button:before {
+  content: "\2713\00a0\00a0";
+  font-size: 16px;
+  vertical-align: top;
+}
+/* line 52, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.primary-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+  background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+  background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+  color: white !important;
+}
+/* line 57, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.orange-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+  background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+  background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+  border: solid 1px #ff7f0e !important;
+  color: white !important;
+}
+/* line 62, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.orange-button:hover {
+  background: #ff7f0e;
+}
+/* line 67, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.green-button {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+  background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+  background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+  border-color: #b6c7a6 !important;
+  color: white !important;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 74, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.file-button {
+  padding-left: 10px;
+}
+/* line 77, /app/app/assets/stylesheets/shared/button.scss */
+.very-large-green-button.file-button:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+  float: left;
+  display: block;
+  margin-top: 2px;
+  margin-right: 8px;
+  height: 16px;
+  width: 13px;
+}
+
+/* line 130, /app/app/assets/stylesheets/shared/button.scss */
+.link-like-button {
+  font-weight: 300;
+  background-color: transparent;
+  border: 0px;
+  color: #118bd9;
+  font-size: 13px;
+  cursor: pointer;
+  -moz-box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.3);
+  padding: 0px;
+  margin-right: 0px;
+  margin-bottom: 2px;
+  margin-left: 0;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 144, /app/app/assets/stylesheets/shared/button.scss */
+.link-like-button:hover {
+  text-decoration: underline;
+}
+
+/* Colors */
+/* Fonts */
+/* Mixins */
+/* line 4, /app/app/assets/stylesheets/shared/background_fields.scss */
+.education .employment-input, .employment .employment-input {
+  width: 60% !important;
+}
+/* line 8, /app/app/assets/stylesheets/shared/background_fields.scss */
+.education .month, .employment .month {
+  width: 25px !important;
+}
+/* line 12, /app/app/assets/stylesheets/shared/background_fields.scss */
+.education .year, .employment .year {
+  width: 35px !important;
+}
+/* line 16, /app/app/assets/stylesheets/shared/background_fields.scss */
+.education fieldset, .employment fieldset {
+  border: none;
+}
+/* line 22, /app/app/assets/stylesheets/shared/background_fields.scss */
+.education .select2-container a:focus, .employment .select2-container a:focus {
+  outline: none;
+}
+/* line 28, /app/app/assets/stylesheets/shared/background_fields.scss */
+.education label.current, .employment label.current {
+  float: none !important;
+}
+
+/* line 33, /app/app/assets/stylesheets/shared/background_fields.scss */
+#add_education, #add_employment {
+  display: block;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+/* line 39, /app/app/assets/stylesheets/shared/background_fields.scss */
+.remove-background-field {
+  display: inline-block;
+  margin-left: 15px;
+  height: 25px;
+}
+/* line 44, /app/app/assets/stylesheets/shared/background_fields.scss */
+.remove-background-field img {
+  width: 15px;
+}
+
+/* line 12, /app/app/assets/stylesheets/common.sass */
+html, body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* line 17, /app/app/assets/stylesheets/common.sass */
+a {
+  text-decoration: none;
+  color: #118bd9;
+}
+/* line 21, /app/app/assets/stylesheets/common.sass */
+a:hover {
+  text-decoration: underline;
+}
+
+/** Opera Fix */
+/* line 25, /app/app/assets/stylesheets/common.sass */
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+/* line 32, /app/app/assets/stylesheets/common.sass */
+#wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0px 10px;
+  min-height: 100%;
+}
+
+/* line 39, /app/app/assets/stylesheets/common.sass */
+#main {
+  max-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+/** Board */
+/* line 45, /app/app/assets/stylesheets/common.sass */
+.opening {
+  margin-bottom: 25px;
+}
+/* line 48, /app/app/assets/stylesheets/common.sass */
+.opening a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 52, /app/app/assets/stylesheets/common.sass */
+.child {
+  margin-left: 30px;
+}
+/* line 53, /app/app/assets/stylesheets/common.sass */
+.child h2 {
+  margin-top: 10px;
+}
+
+/* line 58, /app/app/assets/stylesheets/common.sass */
+#wrapper.no-hierarchy .child {
+  margin-left: 0;
+}
+
+/* line 61, /app/app/assets/stylesheets/common.sass */
+.spacer {
+  width: 20px;
+}
+
+/** Application */
+/* line 65, /app/app/assets/stylesheets/common.sass */
+input[type='checkbox'] {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
+
+/* line 75, /app/app/assets/stylesheets/common.sass */
+.button {
+  padding: 10px 20px;
+  color: #FFF;
+  background-color: #74A24B;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8CC658), to(#74A24B));
+  background-image: -webkit-linear-gradient(top, #8CC658, #74A24B);
+  background-image: -moz-linear-gradient(top, #8CC658, #74A24B);
+  background-image: -ms-linear-gradient(top, #8CC658, #74A24B);
+  background-image: -o-linear-gradient(top, #8CC658, #74A24B);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8CC658", endColorstr="#FF74A24B");
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 84, /app/app/assets/stylesheets/common.sass */
+.button:hover {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#74A24B), to(#8CC658));
+  background-image: -webkit-linear-gradient(top, #74A24B, #8CC658);
+  background-image: -moz-linear-gradient(top, #74A24B, #8CC658);
+  background-image: -ms-linear-gradient(top, #74A24B, #8CC658);
+  background-image: -o-linear-gradient(top, #74A24B, #8CC658);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF74A24B", endColorstr="#FF8CC658");
+}
+
+/* line 89, /app/app/assets/stylesheets/common.sass */
+.location {
+  color: #7C7C7C;
+  margin: 8px 0px;
+}
+
+/* line 93, /app/app/assets/stylesheets/common.sass */
+.company-name {
+  font-size: 16px;
+}
+
+/* line 96, /app/app/assets/stylesheets/common.sass */
+#app_body {
+  max-width: 600px;
+  position: relative;
+}
+/* line 100, /app/app/assets/stylesheets/common.sass */
+#app_body h1 {
+  margin-bottom: 0px;
+}
+
+/* line 103, /app/app/assets/stylesheets/common.sass */
+#view-more {
+  text-align: right;
+  padding: 5px 0;
+}
+
+/* line 107, /app/app/assets/stylesheets/common.sass */
+#header {
+  padding-right: 120px;
+}
+
+/* line 110, /app/app/assets/stylesheets/common.sass */
+#apply_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 115, /app/app/assets/stylesheets/common.sass */
+#application {
+  padding: 25px 30px 30px 30px;
+  background-color: #f3f3f3;
+  max-width: 550px;
+}
+/* line 120, /app/app/assets/stylesheets/common.sass */
+#application .heading {
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+/* line 126, /app/app/assets/stylesheets/common.sass */
+#application div.required-fields {
+  float: right;
+  font-size: 12px;
+  color: #747474;
+}
+/* line 131, /app/app/assets/stylesheets/common.sass */
+#application hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background-color: #DADADA;
+  margin: 25px 0;
+}
+/* line 139, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin-wrapper, #application .apply-with-seek-wrapper {
+  display: none;
+}
+/* line 142, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin, #application .apply-with-seek {
+  display: block;
+}
+/* line 145, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin div, #application .apply-with-seek div {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+/* line 150, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin button, #application .apply-with-seek button {
+  display: block;
+  background-position-y: 0;
+  border: none;
+  cursor: pointer;
+}
+/* line 156, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin small, #application .apply-with-seek small {
+  font-size: 12px;
+  color: #747474;
+}
+/* line 160, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin .almost-there, #application .apply-with-seek .almost-there {
+  display: none;
+}
+/* line 164, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin button {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIsAAAA%2FCAYAAADQQjucAAAABmJLR0QA%2FwD%2FAP%2BgvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wkDEg4Z1VM7lQAAErtJREFUeNrtnXlYk2e2wH%2BgyB5CICEsshMooggUcWErraBTW6dXWzuVqbadztxZu8xM1fa21jq22pnbezudpbUubW19elt91FrbUWtFpRWpggsgZQsR2SIGZDMswv0j5jOBEAJE68Pk9w9fct6c77zvd95zzvflGO1YsS8RyAUmMVb6%2BnC4XEOv2Id%2BBydsjAuagW3AHyeQvLQKcLSKWjs7%2BpxFTFIruebuZVvm8YEzkARMsreao%2Bixt8eu75pticcfT07UH4mdHcj5eRKxviLO1LeSvvEELVd7bEtkQ4%2FEXn%2B0PCGAWF8RALG%2BIpYnBNiWx4Zx0tAfDIwitqhiYyATSF76MsDp%2BlY8nR3o6u1jT0kj63MqR610YmsT10RSs2N%2BcYc3TydNRtNyFVXn2B1z272RyCbacaqp02qL89qcQO4J9OBQzZURyUzNc1f55VHbPNa5Gdpqqd1mIwvA03tLSN%2BYx9N7S266lz42O5jslDCWTJNbRV92ShjJoda9A7tD7s4dcnfhgvWv%2F5Egu2%2B6P%2FdN9x9WR3KoF9kpYSZlccESgiUuN31uhrZaarfJIGD4wnAx7FZ%2BYfTekSoNT39ewv8uiCYtVCKMe%2F%2FURZ7%2B%2FPyI0laa1IWkCBnV6jbmx%2FrDoSqjXQBQrekkOdSL3KrLvHO%2BaViZnnBXB1anhwqyNKkLP5sxmT1FDexQXRHG3B3oQWlTJ0cudbI4yAOAHaorpEldiPJ24dCFK5xvaBPsjQuWCE7z033fG0WOoWwZjsJqDdWaTovnBrAy3pdAT2feyKsB4InpvgSInSmub2V9Qb1Ju8xFveRQLzbl1%2FCzGZO52HKVVd9csMxZzF7gUAk5P5%2BJh5PxR5ZdL4SXf3rW4kVaMk1OZ1cv6788z9vLZpAmdeHIpU7B80Nk7nR09dCh7SU7JYzYg6X86lCVWZmeio4esmL98BU78875JuYpvMlOCWNTfo3RmDMPx3O8TM2Rj07z%2FuNJOmdZfYBnUkOYO80f19UHhB146uIVZB5OQjTQEyJzZ%2B0DU4Xdz%2Fv5I3IYfcR553yT0dz0Ms9PCgc5wGsPxbHqk0IqOnpQPpuCzMMZpbqN7JQwZoZI%2BPHOYlbG%2B%2FLaQ3FUq9vIivXD1dEBpbptyKiXFetHh7aXYJkukv54Z%2FHwaWg4BjrKQIexlPmx%2FhwvU%2FPO%2BSY6u3r52YzJg8bMfjOXkDeOUVzTzOKkIItlAN9%2Br2aWQgbAXVEyimuaBWfUc%2B6ChmlBnqRJdWnAxXEii4M8iA2ScO6CxmjsDtUV9p%2BpAyDm78eF9zu6epC9epjZb%2BYKiz8WBuqbcv3uFCBC7s4bD8fzz4OlrC%2Bo57U5gQTL3Fm25QQxfz%2FO%2Br1FLEwMIk3qwrPzoiiuaSbkjWOCLnM8%2BO4JQt44RrW6jXC5yLKaZTjWfFWO3covsFv5BWu%2BKh%2FVgqRJXQiWuSMXO7Pt3kg6unSRwBCluo2Kjh4hVEtFzhbJ9Hx48qJw8acGSth7unbQmMOlaqQiZ%2BYpvFGq2yiuaSYhwINgmTuHS9UWzUV9RStEKmtgTl9ShAwXx4n4iXXzDbj%2B99NfzqF%2F%2FY9YeV8MAFHeLkhFzhRWawRdpqKKIfqN1NHVa3nNMhzvnbooHO8uaWT1PREjXhDDKBIXLBHC3%2BIgD6GmcHW8YZav2JlOg0mYkxlGgkutV3l5QTQujhPZfLp%2B0Jh%2FlTWxEng4KYjc73XO8fD1KGVq%2FA%2FNiXKdjQsTg0g7qqRNq3OoiLUHqejoEeqwQxeu0NnVi6%2F4xiaSeTgJjjgWRuQs1c1XhePTda2jOmFWrB8nytXM3HzyRvhdk0n2nQGCswTL3Ml74k4aWq5y91Q%2F9nynEsaakxmy%2F0wd2SlhnChXm9ypRy51Uq1uI1jmzvovz%2BPp7EB2ShjVBpHLFEW%2FnmWUiiyl6NezjF6PVEd5Qxub8mvI%2Bb2MDfdHs%2BKzEpalhnPwFzPJ%2FV4tROdDb%2BZy8GwtCxOD2L2oB7nYGanI%2BdY7y1gJd3Vg%2F5m6QRX6Xw%2BUGtVDxTXNlDe0ERcs4cNjlUZ3H0PJPjxWaaR3U34N2Slh7C6sHdKed3IqmOIr4tAFnZNOGaDDMH2tyamiTduDu5PDIJmp8%2Bsxdzdi%2BBlz%2BvTHRy51suqTQqb4iqjt7OFHf8vlxUwFccESzqqaWXugjIqOHn68s5ht2l7igiUUVmuM0qrheQbaZipdG2LHin39ltw6G75nbjyA48XzdAXcMSqH0u9AUzvPnGzgQ6i7omRMDZQQ%2B%2Fphq9UU%2F%2B5MvN0MqmhoHZVs4MM0NycH1u45Z3OU8ewsQ93jDycbzTgbI8MoDVmLsaQhG7ctGnugy6oq%2B%2Frot59gW9rxxyZ7IAXotpajOFyuoUcaaFva8UMz8FfgxYn09wF2YGdnBb392PVomdCmoX%2Big22Zxxm6hm07Oys1bNtzzdWTSWolfc4i2%2BqODwwbtu2s3LA9Afr7bUs8%2FrA1bNuwGFvDto0RJA39ga1h24YlBe7LYOWG7ZYG%2BlzMF7hPTvPndykKNJoOVO1jf9Tz3uIEpBPtKWhss9rirMuI5O4Qb75WXh6RzNQ8d5fUj9rmsc7N0FZL7TYbWeAWN2yn30F2RgwPJQRZRV92RgxzFHKr2hjl70mUv6dwwXr%2FsUyQLUgMZUFi6LA65ijkZGfEmJTFhckI9na76XMztNVSu00GAaOnJLeoYTtVLmJGlD%2FVjS3MuzMU9p0z2gUA1U3tzFHI%2BaasgXfP1g4r0xPh5sgL82IEWapcxOPJEewtVLGzskkYkx7qzffqNo42tLIozBuAnZVNpMpFRMrcyalqorS2WbA3LkwmOM3yHaeMIsdQtgxHYaWa6qZ2i%2BcG8NzMEAK93HjzSJmu1pwRjL%2FEjZKLGl7PU5q0y1zUm6OQsyW3nMeTI6jVtPPC199b5izmsGbD9kMJQXRqe9iw6yT%2F%2FM97SJWLOHr9G%2BUFiaGE%2BHjS0dVNh7aH7IwYYvcV8Jt958zK9JS3d5GVEIKfxJV3z9aSFe1LdkYMW3LLjcacWp5GXulFMjceZeuvM3XO8ux2npobzdy4UETPbhd2YIHqMjKxqxAN9IT4ePLKT2YJu5%2B3vxqRw%2Bgjzrtna43mppd5fnB0kAO8%2Bmgqz39wlPL2LipWL0Tm4YqysZnsjBiSInxYtC2P52aG8OqjqVQ3tpCVEIKr4ySUjc1DRr2shBA6tD0E%2B4iJ8vdk0ba84dPQcFirYXvenaHklV7k3bO1dGp7eDx5cHtm6rq9hK%2FZQ7FKzaLkSItlAN%2BWXGRmlM6mu2ImU6xSC86op6hazdQQGanXG5RdnBxYFOZNbKgPRdXGPbg7K5vYf0p30WI3fCm839HVje%2BqHaSu2yss%2FlgYqC864EYEV%2Fh58t%2FL03h7XwGv5ylZlxFJsI%2BYx%2F5%2BgNgNX7JhRx4LZ0WSKhfxzMIEilVqwtfsEXSZY8mbBwhfs4fqxhbC%2FTwtq1mGwxoN26lyEcE%2BYnw8XXlvcQIdXd1kJYQYjVE2NlN%2BvegtrFQj9XC1SKZn%2B7cVwsWPCZbx%2BXdVg8YcLqpB6uFKVrQvysZmilVq4oO8CPYRc7ioxqK5qFs6hEhlDczpmxHlj4uTA74S3Xz9Jbpa5%2F9%2Bfy%2B9%2F1jGisUzAYiUuSP1cKWwUi3oMhVVDNFvpA5tt%2BU1y7B3HFZo2DaMInFhMiH8LQrzFmoKV6cbvyvkJ3GlU3ujHjInM4wEl6508NLiRFycHHgvv3rQmP0l9awAlqREkVusm9eSlCjdPE2M%2F6HJL9Wlt4WzIkk9WEL7Vd2FveO5jylv7xLqsJyqJjq1PfhJbmwimdhVcMSxcOsbthNCyC%2BtZfZfvxLea33jER6ZHS44S7CPmG9%2Fdw%2F1ze1kTA9hz%2FEbRZc5mZEznFKSnRFDfmmtyZ16tKGV6sYWgn3EbNh1Ek%2BXSWRnxFDd2GI2UpxZMd8oFVnKmRXzjV6PVEdZXTNbcsv5%2BqUHWP%2FQDFZ%2Bks%2Bjd0%2Fly9%2FPI7f4ohCdU9ft5WBhFQtnRbLzp934eroh9fgBnGWsRLg5sv%2BUclCF%2Ftbnp%2FBwvhExilVqyuqaiQuT8eHXRUZ3H0PJPvy6yEjvltxysjNi2J0%2F9POijfvPEh0gIadK56TRA3QYpq91%2Fyqi%2FWo3btftHJjaBp5fj7m7EcPPmNOnPz7a0MrzHxwlOkBCfXsXC17%2FnP%2B6fzpxYTLOKdX86bPTlLd3sWhbHu9d7SEuTEZhpdoorRqeZ6BtptK1ITelYdtJWUiP1%2Bi%2BLtDvQFM7z5xs4EOou2ImExMsI%2BGlnVarKf7duf0atuuaRyUb%2BDDN1dmBP31y3OYo49lZhrrHH042mnE2RsZNadgeSxqycduisYd%2BKzdsX7NSi6aN24xN9vT3p9Df320tR5nUUEGvSGZb2vHDjYZtu%2F5%2B%2Bq0UCewAu2u9TNC20z9hom2ZxxlWb9juc%2FfCQV1Nv6OLbXXHBwYN23bWbdjutzVsj1dsDds2LMbWsG3DcmwN2zZGVOC%2BDNZt2HbQ1A5b4D4RH8Rv75qC5nIbF9rG%2FhNWWx6ZjbeDPYX1V6y2OGuzppIR7sPhSvWIZKbmuedczahtHuvcDG211G6zkQVubcP28rtjWTo3nsVJ4VbRt3RuPHOi%2FK1qY1SAN1EB3sIF69r6G0F2b1Ik9yZFDqtjTpQ%2FS%2BfGm5RND%2FcjWCq66XMztNVSu03xgzRsp%2FiJmREdiKpBw%2FwZCp7addJoFwBUX2plTpQ%2F35TWsrlANaxMT7jIiecXxAuyFD8xj6VHs%2FdkJbvKGoUxaeE%2BlDVc4VhdCw8ofADYVdZIip8YhdyDIxWNlF5sEuydHu4nOM3j2781ihxD2TIcpyvqqL7UavHcAP6QrGCyVMRbh4oAWDYrAn8vd0ouNPGX3DKTdpmLenOi%2FNmaU8Jj6dHUXm7jxf3nLHMWc1izYXtxUjid2m42fPoN%2F%2FjtfaT4iTlW1yJ4foivhA5tN53abpbOjWfaZ3k8teukWZmeilYtmYkKfL3c2VygInPqZJbOjWdrTonRmO%2BezCKvRMX8t%2Faz5ZmFOmf55UZ%2BNz%2BOe%2B6MwPOXG4UdWKBUI%2FN0E6KBnhBfCWt%2Bepew%2B3lr74gcRh9xNheojOaml3luPjDIAdY9kckLmw9Q0aql7LVHkIrdUNZrWDo3nqRIfx7cfJg%2FJCtY90QmqgYNmYkKXJ0moazXDBn1MhMVdGq7CZJLiArw5sHNh4dPQ8NhtV%2FYnqEgr0TF5gIVndpuHkuPHjQmffXHKFZtp1jZwKLUGItlAMeLVMyM1v17pPRpIRQrGwRn1FNU1cDUUF9S%2FMQAuDhN4gGFD7HhvhRVGTcF7Spr5MB3uosW%2F8oO4f0ObTcBz7xH%2BuqPhcUfCwP1RQd6C7IIf2%2F%2B8mQWb3%2BWx19yy1ibNZUguYTH%2F2cP8a%2Fs4PWPj3B%2F8hRS%2FMQ8vWg2xcoGFKu2C7rM8ZM%2F70axajuqBg1h%2Fl6W1SzDYY2G7RQ%2FMUFyCT6e7mx5ZDYd2m4yExVGY5T1GipatUKolordLJLp2X6sRLj4MaFy9p0Y3HqZc1aJVOxG5tTJKOs1FCsbiA%2BRESSXkHNWadFc1M3tQqSyBub0zYgOxMVpEn4S3f9S4u%2Bl%2B%2Fvxqgfp2vobnns4DQCF3AOp2I3TFXWCLlNRxRD9RtL39VrFWQY2bI8GwygyPdyPTm03UrGbUDcAQusigK%2BXO50GXefmZIaR4FJLOy8%2BnIKL0yTePz7YsQ9cvztZkj6V0xV1nK6oY0m6rm4wNf6HJr%2FkAvklF4To0Xb9wk55ahOOj%2F2NKU9t4ldv7eVIRSOd2m58rzsTIKTQsXLLG7YzExXkl1wg5c%2BfCe81%2F%2FPnPJISLRSgQXIJx%2F54Pw2aNjLiI%2Fgs98avT5qTGTnDd2UsnRtPfskFkzv1WF0LqgYNQXIJGz79Bk8XR5bOjUfVoDEbKQpeWmyUiiyl4KXFRq9HqqO8tomtOSV8tS6bV5em8vxHR3k0M54vVv0HueeqheicvvpjvjpZzv3JU%2Fj0iW7kEnekYjchat0yZxkr4SInDnxXNqhC%2F9vu44hcbnxFVaxsoLy2ienhfnx0sMDo7mMo2UcHC4z0bs0pYencePYcLx3Sno37ThId6M2RCp2TRg%2FQYZi%2BXv28gLar3bhfj2wDU9vA8%2Bsxdzdi%2BBlz%2BvTHx%2BpaeGHzAaIDvalv13L%2F2k94flES08P9OFdVz6s7T1DRquXBzYfZcrWL6eF%2BnK6oM0qrhucZaJupdG3ITWnYdi7P55rIe1QOpd%2BBpnaeOdnAh1Dp00KICZWTuOIDq9UU%2F%2B7cdk0nlbWXRyUb%2BDDN1XkS6z7KsTnKeHaWoe7xh5ONZpyNkXFTGrbHkoZs3LZo7Om3bsO2na1he7yyyd6uv89qDdt2fdeYVFtKn4uHbWnHD0LD9v8Dec1%2FMsp7CBUAAAAASUVORK5CYII%3D);
+  width: 139px;
+  height: 21px;
+}
+/* line 169, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin button:hover {
+  background-position-y: -21px;
+}
+/* line 172, /app/app/assets/stylesheets/common.sass */
+#application .apply-with-linkedin button:active {
+  background-position-y: -42px;
+}
+/* line 175, /app/app/assets/stylesheets/common.sass */
+#application .seek-apply-optional {
+  margin-left: 3px;
+}
+/* line 178, /app/app/assets/stylesheets/common.sass */
+#application .seek-apply {
+  display: block;
+  width: 230px;
+  height: 45px;
+  padding-right: 0px !important;
+  line-height: 45px;
+  background: #e60278;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(64, 64, 64, 0.5);
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Helvetica, Arial;
+}
+/* line 194, /app/app/assets/stylesheets/common.sass */
+#application .seek-apply:hover {
+  background: #fd0585;
+  box-shadow: 0 1px 2px 0 rgba(64, 64, 64, 0.4);
+}
+/* line 198, /app/app/assets/stylesheets/common.sass */
+#application .seek-apply:active {
+  background: #cd026b;
+  box-shadow: 0 1px 2px 0 rgba(64, 64, 64, 0.7);
+}
+/* line 202, /app/app/assets/stylesheets/common.sass */
+#application .seek-apply .apply-with-seek-button {
+  display: inline-block;
+  height: 30px;
+  width: 75px;
+  margin: -1px 0 0 9px;
+  vertical-align: middle;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%2BCjxzdmcgaWQ9InNrLWxvZ28tcG9zIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iNjNweCIgdmlld0JveD0iMCAwIDIxMi43ODkgODMuNzc3IiB3aWR0aD0iMTU5cHgiIHk9IjBweCIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI%2BCgk8cGF0aCBkPSJtMTA4LjQ2IDU2LjgxOGMtNC43NjQgMC05LjA2OC0wLjUyNi0xMi45MDItNC4zNjJsNC45NC00LjkzOWMyLjUwMiAyLjQ5NyA1Ljc1NiAyLjg0NiA4LjA3OSAyLjg0NiAyLjYxNyAwIDUuMzQ2LTAuODcgNS4zNDYtMy4xMzYgMC0xLjUxMy0wLjgxMS0yLjU1OS0zLjE5NC0yLjc5MmwtNC43NjctMC40NjRjLTUuNDY0LTAuNTIxLTguODMzLTIuOTAzLTguODMzLTguNDg3IDAtNi4yNzQgNS41MTgtOS42NDYgMTEuNjgxLTkuNjQ2IDQuNzA4IDAgOC42NTkgMC44MTQgMTEuNTY2IDMuNTQ0bC00LjY0OCA0LjcwOGMtMS43NDQtMS41NjgtNC40Mi0yLjAzMS03LjAzNS0yLjAzMS0zLjAyIDAtNC4yOTkgMS4zOTQtNC4yOTkgMi45MDQgMCAxLjEwNSAwLjQ2NSAyLjM4NCAzLjEzOCAyLjYxNmw0Ljc2OSAwLjQ2NmM1Ljk4MiAwLjU4IDkuMDEgMy43NzggOS4wMSA4Ljg5My0wLjAxIDYuNjgyLTUuNzEgOS44OC0xMi44NiA5Ljg4eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTEzMS41MyA0My42OGMwIDMuODk1IDIuMzg0IDYuNzQzIDYuNjI4IDYuNzQzIDMuMzEgMCA0LjkzOC0wLjkzIDYuODU2LTIuODQ4bDQuNTkzIDQuNDc0Yy0zLjA4IDMuMDgyLTYuMDQ1IDQuNzctMTEuNTEgNC43Ny03LjE0OCAwLTE0LjAwNS0zLjI1NS0xNC4wMDUtMTUuNTIyIDAtOS44ODEgNS4zNDYtMTUuNDYgMTMuMTkxLTE1LjQ2IDguNDI4IDAgMTMuMTk0IDYuMTY0IDEzLjE5NCAxNC40NzV2My4zNjloLTE4Ljk1em0xMC44Mi04LjQzYy0wLjgxOC0xLjc5OC0yLjUwNC0zLjEzNi01LjA2LTMuMTM2LTIuNTYgMC00LjI0MyAxLjMzNy01LjA1NyAzLjEzNi0wLjQ2NiAxLjEwNy0wLjYzNyAxLjkyMi0wLjY5NyAzLjI2aDExLjUxMWMtMC4wNi0xLjMzOS0wLjIzLTIuMTUzLTAuNjktMy4yNnoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im0xNjEuMzUgNDMuNjhjMCAzLjg5NSAyLjM4NiA2Ljc0MyA2LjYyNSA2Ljc0MyAzLjMxNCAwIDQuOTQyLTAuOTMgNi44Ni0yLjg0OGw0LjU5MiA0LjQ3NGMtMy4wODEgMy4wODItNi4wNDYgNC43Ny0xMS41MDggNC43Ny03LjE1IDAtMTQuMDEtMy4yNTUtMTQuMDEtMTUuNTIyIDAtOS44ODEgNS4zNDktMTUuNDYgMTMuMTk2LTE1LjQ2IDguNDI3IDAgMTMuMTk0IDYuMTY0IDEzLjE5NCAxNC40NzV2My4zNjloLTE4Ljk1em0xMC44MS04LjQzYy0wLjgxNS0xLjc5OC0yLjUwMi0zLjEzNi01LjA1Ny0zLjEzNi0yLjU2IDAtNC4yNDYgMS4zMzctNS4wNTkgMy4xMzYtMC40NjYgMS4xMDctMC42NCAxLjkyMi0wLjY5NyAzLjI2aDExLjUxYy0wLjA1LTEuMzM5LTAuMjItMi4xNTMtMC42OS0zLjI2eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTIwMy40MyA1Ni40NzFsLTcuNDM2LTEyLjYxOS0zLjIwNCAzLjYxdjkuMDA4aC03LjU1M3YtNDEuMzg3aDcuNTUzdjIzLjQ4NGwxMC4wNTgtMTIuMzgyaDkuMTI5bC0xMC44MTMgMTIuMjA3IDExLjYyMyAxOC4wNzloLTkuMzZ6IiBmaWxsPSIjZmZmIi8%2BCgk8Y2lyY2xlIGN4PSI0MS45IiBjeT0iNDEuOSIgc3Ryb2tlLXdpZHRoPSIwIiByPSI0MS45IiBmaWxsPSIjMEQzODgwIi8%2BCgk8cGF0aCBkPSJtNDIuODgzIDE1Ljk3OGMwLTEuNDQ3IDEuMTY4LTIuNjIgMi42MTItMi42MiAxLjQ1MSAwIDIuNjIyIDEuMTczIDIuNjIyIDIuNjIgMCAxLjQ0Mi0xLjE3MSAyLjYxNS0yLjYyMiAyLjYxNS0xLjQ0NCAwLTIuNjEyLTEuMTczLTIuNjEyLTIuNjE1eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTUxLjAyNiAyNC43NzhjMC0xLjU5NyAxLjI5NC0yLjg4OSAyLjg4NC0yLjg4OSAxLjU5OCAwIDIuODkgMS4yOTIgMi44OSAyLjg4OSAwIDEuNTkzLTEuMjkyIDIuODg2LTIuODkgMi44ODYtMS41OSAwLTIuODg0LTEuMjkzLTIuODg0LTIuODg2eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTQyLjg4MyAyNC43NzhjMC0xLjQ0NyAxLjE2OC0yLjYxNiAyLjYxMi0yLjYxNiAxLjQ1MSAwIDIuNjIyIDEuMTY5IDIuNjIyIDIuNjE2IDAgMS40NDMtMS4xNzEgMi42MTktMi42MjIgMi42MTktMS40NDQgMC0yLjYxMi0xLjE3Ni0yLjYxMi0yLjYxOXoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im01OS42OTcgMzMuNjA4YzAtMS43OTQgMS40NDktMy4yNDMgMy4yNDQtMy4yNDMgMS43OTMgMCAzLjIzOCAxLjQ0OCAzLjIzOCAzLjI0MyAwIDEuNzkxLTEuNDQ1IDMuMjQxLTMuMjM4IDMuMjQxLTEuNzk1IDAtMy4yNDQtMS40NS0zLjI0NC0zLjI0MXoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im01MS4wMjYgMzMuNTgxYzAtMS41OTYgMS4yOTQtMi44ODcgMi44ODQtMi44ODcgMS41OTggMCAyLjg5IDEuMjkyIDIuODkgMi44ODcgMCAxLjU5My0xLjI5MiAyLjg4NC0yLjg5IDIuODg0LTEuNTkgMC0yLjg4NC0xLjI5MS0yLjg4NC0yLjg4NHoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im00Mi44ODMgMzMuNTgxYzAtMS40NDYgMS4xNjgtMi42MTggMi42MTItMi42MTggMS40NTEgMCAyLjYyMiAxLjE3MSAyLjYyMiAyLjYxOHMtMS4xNzEgMi42MTgtMi42MjIgMi42MThjLTEuNDQ0IDAtMi42MTItMS4xNzEtMi42MTItMi42MTh6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtMzUuMDk5IDMzLjU4MWMwLTEuMjY1IDEuMDI0LTIuMjg5IDIuMjkxLTIuMjg5IDEuMjcgMCAyLjI5MiAxLjAyNCAyLjI5MiAyLjI4OXMtMS4wMjMgMi4yOTEtMi4yOTIgMi4yOTFjLTEuMjY2IDAtMi4yOTEtMS4wMjYtMi4yOTEtMi4yOTF6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtMjguNjExIDMzLjU4MWMwLTEuMDg1IDAuODc4LTEuOTY2IDEuOTYzLTEuOTY2IDEuMDgzIDAgMS45NjEgMC44ODEgMS45NjEgMS45NjYgMCAxLjA4NC0wLjg3OSAxLjk2NC0xLjk2MSAxLjk2NC0xLjA4NCAwLTEuOTYzLTAuODc5LTEuOTYzLTEuOTY0eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTIyLjQyNSAzMy41ODFjMC0wLjkwNiAwLjczMS0xLjYzNyAxLjYzNi0xLjYzNyAwLjkwOCAwIDEuNjM3IDAuNzMxIDEuNjM3IDEuNjM3cy0wLjcyOSAxLjYzOC0xLjYzNyAxLjYzOGMtMC45MDUgMC0xLjYzNi0wLjczMi0xLjYzNi0xLjYzOHoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im0xNy4xODkgMzMuNTgxYzAtMC43MjUgMC41ODktMS4zMDkgMS4zMTMtMS4zMDkgMC43MTkgMCAxLjMwOSAwLjU4NCAxLjMwOSAxLjMwOSAwIDAuNzI2LTAuNTkgMS4zMDgtMS4zMDkgMS4zMDgtMC43MjQgMC0xLjMxMy0wLjU4Mi0xLjMxMy0xLjMwOHoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im0xMi4yMzMgMzMuNTgxYzAtMC41NDQgMC40MzgtMC45ODMgMC45ODItMC45ODMgMC41NDMgMCAwLjk4MSAwLjQzOSAwLjk4MSAwLjk4MyAwIDAuNTQyLTAuNDM4IDAuOTgxLTAuOTgxIDAuOTgxLTAuNTQ0IDAuMDAxLTAuOTgyLTAuNDM4LTAuOTgyLTAuOTgxeiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTguMDQ1IDMzLjU4MWMwLTAuMzYzIDAuMjk1LTAuNjUzIDAuNjU4LTAuNjUzIDAuMzU4IDAgMC42NDkgMC4yOTEgMC42NDkgMC42NTMgMCAwLjM2MS0wLjI5MSAwLjY1Ni0wLjY0OSAwLjY1Ni0wLjM2MyAwLTAuNjU4LTAuMjk1LTAuNjU4LTAuNjU2eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTU5LjY5NyA0Mi40MDhjMC0xLjc4NiAxLjQ0OS0zLjI0MyAzLjI0NC0zLjI0MyAxLjc5MyAwIDMuMjM4IDEuNDU4IDMuMjM4IDMuMjQzIDAgMS43OTMtMS40NDUgMy4yNDEtMy4yMzggMy4yNDEtMS43OTUtMC4wMDEtMy4yNDQtMS40NDgtMy4yNDQtMy4yNDF6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtNTEuMDI2IDQyLjM4MWMwLTEuNTk0IDEuMjk0LTIuODg0IDIuODg0LTIuODg0IDEuNTk4IDAgMi44OSAxLjI5IDIuODkgMi44ODQgMCAxLjU5Ni0xLjI5MiAyLjg5LTIuODkgMi44OS0xLjU5IDAtMi44ODQtMS4yOTQtMi44ODQtMi44OXoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im00Mi44ODMgNDIuMzgxYzAtMS40NDggMS4xNjgtMi42MTYgMi42MTItMi42MTYgMS40NTEgMCAyLjYyMiAxLjE2OCAyLjYyMiAyLjYxNiAwIDEuNDQ2LTEuMTcxIDIuNjE5LTIuNjIyIDIuNjE5LTEuNDQ0IDAtMi42MTItMS4xNzMtMi42MTItMi42MTl6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtMzUuMDk5IDQyLjM4MWMwLTEuMjY2IDEuMDI0LTIuMjg5IDIuMjkxLTIuMjg5IDEuMjcgMCAyLjI5MiAxLjAyMyAyLjI5MiAyLjI4OXMtMS4wMjMgMi4yOTItMi4yOTIgMi4yOTJjLTEuMjY2IDAtMi4yOTEtMS4wMjYtMi4yOTEtMi4yOTJ6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtMjguNjExIDQyLjM4MWMwLTEuMDg1IDAuODc4LTEuOTYzIDEuOTYzLTEuOTYzIDEuMDgzIDAgMS45NjEgMC44NzggMS45NjEgMS45NjMgMCAxLjA4My0wLjg3OSAxLjk2NC0xLjk2MSAxLjk2NC0xLjA4NCAwLjAwMS0xLjk2My0wLjg4LTEuOTYzLTEuOTY0eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTIyLjQyNSA0Mi4zODFjMC0wLjkwNiAwLjczMS0xLjYzNSAxLjYzNi0xLjYzNSAwLjkwOCAwIDEuNjM3IDAuNzI5IDEuNjM3IDEuNjM1cy0wLjcyOSAxLjYzOS0xLjYzNyAxLjYzOWMtMC45MDUgMC0xLjYzNi0wLjczMi0xLjYzNi0xLjYzOXoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im0xNy4xODkgNDIuMzgxYzAtMC43MjUgMC41ODktMS4zMDkgMS4zMTMtMS4zMDkgMC43MTkgMCAxLjMwOSAwLjU4NCAxLjMwOSAxLjMwOSAwIDAuNzI0LTAuNTkgMS4zMDgtMS4zMDkgMS4zMDgtMC43MjQgMC0xLjMxMy0wLjU4NC0xLjMxMy0xLjMwOHoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im0xMi4yMzMgNDIuMzgxYzAtMC41NDEgMC40MzgtMC45OCAwLjk4Mi0wLjk4IDAuNTQzIDAgMC45ODEgMC40MzkgMC45ODEgMC45OCAwIDAuNTQ0LTAuNDM4IDAuOTgtMC45ODEgMC45OC0wLjU0NCAwLjAwMS0wLjk4Mi0wLjQzNi0wLjk4Mi0wLjk4eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTguMDQ1IDQyLjM4MWMwLTAuMzYyIDAuMjk1LTAuNjU2IDAuNjU4LTAuNjU2IDAuMzU4IDAgMC42NDkgMC4yOTMgMC42NDkgMC42NTZzLTAuMjkxIDAuNjU3LTAuNjQ5IDAuNjU3Yy0wLjM2MyAwLjAwMS0wLjY1OC0wLjI5NC0wLjY1OC0wLjY1N3oiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im02OC41OSA0Mi40NjhjMC0xLjk2MyAxLjU5NS0zLjU1MyAzLjU1Mi0zLjU1MyAxLjk2MSAwIDMuNTQ5IDEuNTg5IDMuNTQ5IDMuNTUzIDAgMS45NTgtMS41ODggMy41NDktMy41NDkgMy41NDktMS45NTcgMC0zLjU1Mi0xLjU5MS0zLjU1Mi0zLjU0OXoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im01OS42OTcgNTEuMjA5YzAtMS43OSAxLjQ0OS0zLjI0MiAzLjI0NC0zLjI0MiAxLjc5MyAwIDMuMjM4IDEuNDUyIDMuMjM4IDMuMjQyIDAgMS43OTItMS40NDUgMy4yNDMtMy4yMzggMy4yNDMtMS43OTUgMC4wMDEtMy4yNDQtMS40NTEtMy4yNDQtMy4yNDN6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtNTEuMDI2IDUxLjE4NmMwLTEuNTk3IDEuMjk0LTIuODg5IDIuODg0LTIuODg5IDEuNTk4IDAgMi44OSAxLjI5MiAyLjg5IDIuODg5IDAgMS41OTMtMS4yOTIgMi44ODYtMi44OSAyLjg4Ni0xLjU5LTAuMDAxLTIuODg0LTEuMjkzLTIuODg0LTIuODg2eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTQyLjg4MyA1MS4xODZjMC0xLjQ0NyAxLjE2OC0yLjYyIDIuNjEyLTIuNjIgMS40NTEgMCAyLjYyMiAxLjE3MyAyLjYyMiAyLjYyIDAgMS40NDUtMS4xNzEgMi42MTctMi42MjIgMi42MTctMS40NDQtMC4wMDEtMi42MTItMS4xNzMtMi42MTItMi42MTd6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtMzUuMDk5IDUxLjE4NmMwLTEuMjY2IDEuMDI0LTIuMjk0IDIuMjkxLTIuMjk0IDEuMjcgMCAyLjI5MiAxLjAyOCAyLjI5MiAyLjI5NCAwIDEuMjY4LTEuMDIzIDIuMjg4LTIuMjkyIDIuMjg4LTEuMjY2IDAtMi4yOTEtMS4wMjEtMi4yOTEtMi4yODh6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtMjguNjExIDUxLjE4NmMwLTEuMDg4IDAuODc4LTEuOTYzIDEuOTYzLTEuOTYzIDEuMDgzIDAgMS45NjEgMC44NzUgMS45NjEgMS45NjMgMCAxLjA4NS0wLjg3OSAxLjk2Mi0xLjk2MSAxLjk2Mi0xLjA4NC0wLjAwMS0xLjk2My0wLjg3Ny0xLjk2My0xLjk2MnoiIGZpbGw9IiNmZmYiLz4KCTxwYXRoIGQ9Im0yMi40MjUgNTEuMTg2YzAtMC45MDkgMC43MzEtMS42MzYgMS42MzYtMS42MzYgMC45MDggMCAxLjYzNyAwLjcyNyAxLjYzNyAxLjYzNiAwIDAuOTAyLTAuNzI5IDEuNjM0LTEuNjM3IDEuNjM0LTAuOTA1LTAuMDAxLTEuNjM2LTAuNzMyLTEuNjM2LTEuNjM0eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTE3LjE4OSA1MS4xODZjMC0wLjcyMiAwLjU4OS0xLjMxMSAxLjMxMy0xLjMxMSAwLjcxOSAwIDEuMzA5IDAuNTg5IDEuMzA5IDEuMzExIDAgMC43MjQtMC41OSAxLjMxLTEuMzA5IDEuMzEtMC43MjQgMC0xLjMxMy0wLjU4Ny0xLjMxMy0xLjMxeiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTEyLjIzMyA1MS4xODZjMC0wLjU0MyAwLjQzOC0wLjk4NSAwLjk4Mi0wLjk4NSAwLjU0MyAwIDAuOTgxIDAuNDQyIDAuOTgxIDAuOTg1IDAgMC41NDEtMC40MzggMC45ODItMC45ODEgMC45ODItMC41NDQtMC4wMDEtMC45ODItMC40NDEtMC45ODItMC45ODJ6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtOC4wNDUgNTEuMTg2YzAtMC4zNjIgMC4yOTUtMC42NTggMC42NTgtMC42NTggMC4zNTggMCAwLjY0OSAwLjI5NiAwLjY0OSAwLjY1OCAwIDAuMzU5LTAuMjkxIDAuNjQ5LTAuNjQ5IDAuNjQ5LTAuMzYzIDAtMC42NTgtMC4yOTEtMC42NTgtMC42NDl6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtNTEuMDI2IDU5Ljk4OGMwLTEuNTk2IDEuMjk0LTIuODg5IDIuODg0LTIuODg5IDEuNTk4IDAgMi44OSAxLjI5MyAyLjg5IDIuODg5cy0xLjI5MiAyLjg4Ny0yLjg5IDIuODg3Yy0xLjU5IDAtMi44ODQtMS4yOTEtMi44ODQtMi44ODd6IiBmaWxsPSIjZmZmIi8%2BCgk8cGF0aCBkPSJtNDIuODgzIDU5Ljk4OGMwLTEuNDQ1IDEuMTY4LTIuNjI0IDIuNjEyLTIuNjI0IDEuNDUxIDAgMi42MjIgMS4xNzggMi42MjIgMi42MjQgMCAxLjQ0My0xLjE3MSAyLjYxNy0yLjYyMiAyLjYxNy0xLjQ0NCAwLTIuNjEyLTEuMTczLTIuNjEyLTIuNjE3eiIgZmlsbD0iI2ZmZiIvPgoJPHBhdGggZD0ibTQyLjg4MyA2OC43ODdjMC0xLjQ0MyAxLjE2OC0yLjYxMyAyLjYxMi0yLjYxMyAxLjQ1MSAwIDIuNjIyIDEuMTcgMi42MjIgMi42MTMgMCAxLjQ0Ny0xLjE3MSAyLjYyMS0yLjYyMiAyLjYyMS0xLjQ0NCAwLTIuNjEyLTEuMTc0LTIuNjEyLTIuNjIxeiIgZmlsbD0iI2ZmZiIvPgo8L3N2Zz4K) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 212, /app/app/assets/stylesheets/common.sass */
+#main_fields .asterisk, #custom_fields .asterisk, #eeoc_fields .asterisk {
+  color: #FF2236;
+}
+/* line 215, /app/app/assets/stylesheets/common.sass */
+#main_fields div.eeoc_form_data, #custom_fields div.eeoc_form_data, #eeoc_fields div.eeoc_form_data {
+  text-align: right;
+}
+/* line 218, /app/app/assets/stylesheets/common.sass */
+#main_fields div.eeoc_form_data p, #custom_fields div.eeoc_form_data p, #eeoc_fields div.eeoc_form_data p {
+  margin-top: 0;
+}
+/* line 221, /app/app/assets/stylesheets/common.sass */
+#main_fields div.eeoc_form_data p:not(:last-child), #custom_fields div.eeoc_form_data p:not(:last-child), #eeoc_fields div.eeoc_form_data p:not(:last-child) {
+  margin-bottom: 0;
+}
+/* line 224, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field, #custom_fields div.field, #eeoc_fields div.field {
+  clear: both;
+  overflow: auto;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+/* line 230, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field label, #custom_fields div.field label, #eeoc_fields div.field label {
+  font-size: 12px;
+}
+/* line 233, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field label .asterisk, #custom_fields div.field label .asterisk, #eeoc_fields div.field label .asterisk {
+  font-size: 18px;
+  line-height: 18px;
+}
+/* line 237, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field input[type=text], #main_fields div.field textarea, #main_fields div.field .text-field, #main_fields #custom_fields div.field .select2-container-multi, #custom_fields #main_fields div.field .select2-container-multi, #custom_fields div.field input[type=text], #custom_fields div.field textarea, #custom_fields div.field .text-field, #custom_fields div.field .select2-container-multi, #eeoc_fields div.field input[type=text], #eeoc_fields div.field textarea, #eeoc_fields div.field .text-field, #eeoc_fields #custom_fields div.field .select2-container-multi, #custom_fields #eeoc_fields div.field .select2-container-multi {
+  margin: 0;
+  padding: 5px;
+  border: solid 1px #DDD;
+  font-size: 13px;
+}
+/* line 155, /app/app/assets/stylesheets/includes/shared.scss */
+#main_fields div.field input[type=text]:focus, #main_fields div.field textarea:focus, #main_fields div.field .text-field:focus, #main_fields #custom_fields div.field .select2-container-multi:focus, #custom_fields #main_fields div.field .select2-container-multi:focus, #custom_fields div.field input[type=text]:focus, #custom_fields div.field textarea:focus, #custom_fields div.field .text-field:focus, #custom_fields div.field .select2-container-multi:focus, #eeoc_fields div.field input[type=text]:focus, #eeoc_fields div.field textarea:focus, #eeoc_fields div.field .text-field:focus, #eeoc_fields #custom_fields div.field .select2-container-multi:focus, #custom_fields #eeoc_fields div.field .select2-container-multi:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: none;
+}
+/* line 245, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field textarea, #custom_fields div.field textarea, #eeoc_fields div.field textarea {
+  height: 150px;
+}
+
+/* line 250, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field label, #eeoc_fields div.field label {
+  float: left;
+  width: 105px;
+  text-align: right;
+  margin-right: 10px;
+}
+/* line 256, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field input[type=text], #main_fields div.field textarea, #eeoc_fields div.field input[type=text], #eeoc_fields div.field textarea {
+  width: 397px;
+}
+/* line 259, /app/app/assets/stylesheets/common.sass */
+#main_fields div.field .field-error-msg, #eeoc_fields div.field .field-error-msg {
+  padding-left: 115px;
+}
+/* line 263, /app/app/assets/stylesheets/common.sass */
+#main_fields textarea.paste .field-error-msg, #eeoc_fields textarea.paste .field-error-msg {
+  padding-left: 0;
+}
+
+/* line 266, /app/app/assets/stylesheets/common.sass */
+#eeoc_fields div.field label {
+  width: 135px;
+}
+
+/* line 269, /app/app/assets/stylesheets/common.sass */
+#disability_status_header {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* line 275, /app/app/assets/stylesheets/common.sass */
+#custom_fields div.field input[type=text], #custom_fields div.field textarea, #custom_fields div.field .text-field, #custom_fields div.field .select2-container-multi {
+  margin-top: 6px;
+  width: 514px;
+}
+/* line 279, /app/app/assets/stylesheets/common.sass */
+#custom_fields div.field .select2-container-multi {
+  background: white;
+  padding: 0;
+}
+/* line 284, /app/app/assets/stylesheets/common.sass */
+#custom_fields div.field .select2-container-multi:active {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: none;
+}
+/* line 288, /app/app/assets/stylesheets/common.sass */
+#custom_fields div.field .select2-container-multi .select2-choices {
+  background: none;
+  border: none;
+}
+/* line 292, /app/app/assets/stylesheets/common.sass */
+#custom_fields div.field .select2-container-multi .select2-choices input.select2-input {
+  margin-left: 5px;
+  border: none;
+  margin-top: 0;
+}
+
+/* line 297, /app/app/assets/stylesheets/common.sass */
+.field-error {
+  border: solid 2px #FF2236 !important;
+}
+
+/* line 300, /app/app/assets/stylesheets/common.sass */
+.field-error-msg {
+  color: #FF2236;
+}
+
+/* line 303, /app/app/assets/stylesheets/common.sass */
+.link-like-button {
+  background-color: transparent;
+  border: 0;
+  color: #118bd9;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 2px;
+  margin-left: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 315, /app/app/assets/stylesheets/common.sass */
+.link-like-button:hover {
+  text-decoration: underline;
+}
+
+/* line 318, /app/app/assets/stylesheets/common.sass */
+.file-chooser, textarea.paste, .chosen {
+  display: none;
+}
+
+/* line 322, /app/app/assets/stylesheets/common.sass */
+#resume_chosen img, #resume_chosen span, #cover_letter_chosen img, #cover_letter_chosen span {
+  vertical-align: middle;
+}
+
+/* line 325, /app/app/assets/stylesheets/common.sass */
+#submit_buttons {
+  text-align: right;
+}
+
+/* line 328, /app/app/assets/stylesheets/common.sass */
+#submit_app {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+  padding: 7px 16px;
+  font-size: 13px;
+}
+/* line 339, /app/app/assets/stylesheets/common.sass */
+#submit_app:disabled {
+  background: #6e6e6e;
+}
+
+/* line 342, /app/app/assets/stylesheets/common.sass */
+#error_page {
+  padding: 20px;
+}
+
+/* line 345, /app/app/assets/stylesheets/common.sass */
+#error_message {
+  color: red;
+  width: 60%;
+}
+
+/* line 349, /app/app/assets/stylesheets/common.sass */
+#submission_received {
+  padding: 20px;
+}
+
+/* line 352, /app/app/assets/stylesheets/common.sass */
+.clear {
+  clear: both;
+}
+
+/* line 355, /app/app/assets/stylesheets/common.sass */
+#filter-count {
+  font-weight: 500;
+  color: #6e6e6e;
+}
+
+/* line 359, /app/app/assets/stylesheets/common.sass */
+#internal_job_board_about, .internal-content {
+  margin: 20px 0;
+  font-weight: 400;
+}
+/* line 363, /app/app/assets/stylesheets/common.sass */
+#internal_job_board_about ul, #internal_job_board_about ol, .internal-content ul, .internal-content ol {
+  list-style-position: inside;
+  padding-left: 20px;
+  margin: 13px 0;
+}
+/* line 368, /app/app/assets/stylesheets/common.sass */
+#internal_job_board_about ul, .internal-content ul {
+  list-style: initial;
+}
+/* line 371, /app/app/assets/stylesheets/common.sass */
+#internal_job_board_about ol, .internal-content ol {
+  list-style-type: decimal;
+}
+
+/* line 374, /app/app/assets/stylesheets/common.sass */
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content {
+  max-width: 500px;
+}
+
+@media (min-width: 641px) {
+  /* line 377, /app/app/assets/stylesheets/common.sass */
+  a.locate-me {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 640px) {
+  /* line 377, /app/app/assets/stylesheets/common.sass */
+  a.locate-me {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 600;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#f4f4f4));
+    background-image: -webkit-linear-gradient(top, #fafafa, #f4f4f4);
+    background-image: -moz-linear-gradient(top, #fafafa, #f4f4f4);
+    background-image: -ms-linear-gradient(top, #fafafa, #f4f4f4);
+    background-image: -o-linear-gradient(top, #fafafa, #f4f4f4);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFAFAFA", endColorstr="#FFF4F4F4");
+    border: solid 1px #ddd !important;
+    color: #465335 !important;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 20px;
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 1em;
+  }
+  /* line 22, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me:hover {
+    text-decoration: none;
+  }
+  /* line 26, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me:active:not(.disabled-button) {
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  /* line 30, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.disabled-button {
+    color: #b9b9b9 !important;
+    cursor: default !important;
+  }
+  /* line 34, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.disabled-button.primary-button {
+    color: #bee1fa !important;
+  }
+  /* line 39, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.add-button:before {
+    content: "+\00A0";
+    font-size: 22px;
+    vertical-align: top;
+  }
+  /* line 45, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.checked-button:before {
+    content: "\2713\00a0\00a0";
+    font-size: 16px;
+    vertical-align: top;
+  }
+  /* line 52, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.primary-button {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7faa57), to(#7faa57));
+    background-image: -webkit-linear-gradient(top, #7faa57, #7faa57);
+    background-image: -moz-linear-gradient(top, #7faa57, #7faa57);
+    background-image: -ms-linear-gradient(top, #7faa57, #7faa57);
+    background-image: -o-linear-gradient(top, #7faa57, #7faa57);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF7FAA57", endColorstr="#FF7FAA57");
+    color: white !important;
+  }
+  /* line 57, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.orange-button {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff7f0e), to(#ff7f0e));
+    background-image: -webkit-linear-gradient(top, #ff7f0e, #ff7f0e);
+    background-image: -moz-linear-gradient(top, #ff7f0e, #ff7f0e);
+    background-image: -ms-linear-gradient(top, #ff7f0e, #ff7f0e);
+    background-image: -o-linear-gradient(top, #ff7f0e, #ff7f0e);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FFFF7F0E", endColorstr="#FFFF7F0E");
+    border: solid 1px #ff7f0e !important;
+    color: white !important;
+  }
+  /* line 62, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.orange-button:hover {
+    background: #ff7f0e;
+  }
+  /* line 67, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.green-button {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8ec958), to(#74a04e));
+    background-image: -webkit-linear-gradient(top, #8ec958, #74a04e);
+    background-image: -moz-linear-gradient(top, #8ec958, #74a04e);
+    background-image: -ms-linear-gradient(top, #8ec958, #74a04e);
+    background-image: -o-linear-gradient(top, #8ec958, #74a04e);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#FF8EC958", endColorstr="#FF74A04E");
+    border-color: #b6c7a6 !important;
+    color: white !important;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  /* line 74, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.file-button {
+    padding-left: 10px;
+  }
+  /* line 77, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me.file-button:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo%2FU5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTg1MDc4RUMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNTg1MDc4RkMzOEQxMUUxOTYxRkE1MUI1OTQyMUE5OCI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1ODUwNzhDQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1ODUwNzhEQzM4RDExRTE5NjFGQTUxQjU5NDIxQTk4Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2Bq3gHmwAAAKRJREFUeNpinDdv3n8G7AAkXpCYmDgJQwakCQl8BeJ3P3%2F%2B%2FA8Sh%2BJioBgDMmZCM4MLiAWZmZnBHAMDAxDVM3%2F%2B%2FHJkRUzY3AXTZGhoCNPYAdRYhVcTMkDS2ArUWA9isODTAHI%2FIyMjWCMIXLhwoQGokRWvpgULFmATrsapCRjUGGK%2Ffv1iWLp0KWE%2FYQMkaYKFKu01keU8%2BmsCxxMwlknSBBBgAAglTwCmKQIKAAAAAElFTkSuQmCC);
+    float: left;
+    display: block;
+    margin-top: 2px;
+    margin-right: 8px;
+    height: 16px;
+    width: 13px;
+  }
+  /* line 158, /app/app/assets/stylesheets/shared/button.scss */
+  a.locate-me:active, a.locate-me.active {
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+/* Colors */
+/* Fonts */
+/* Mixins */
+/* line 3, /app/app/assets/stylesheets/shared/drop_zones.scss */
+.hidden {
+  display: none;
+}
+
+/* line 7, /app/app/assets/stylesheets/shared/drop_zones.scss */
+.drop-zone {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px dashed #747474;
+  background-color: #f3f3f3;
+  padding: 10px;
+  width: 160px;
+  text-align: center;
+  color: #747474;
+  font-weight: 500;
+}
+/* line 17, /app/app/assets/stylesheets/shared/drop_zones.scss */
+.drop-zone.highlight {
+  background-color: #f2f8fe;
+}
+/* Colors */
+/* Fonts */
+/* Mixins */
+/*
+ *
+ *
+ *
+ *
+ */
+/* line 9, /app/app/assets/stylesheets/application.sass */
+#footer {
+  position: relative;
+  margin-top: -100px;
+  height: 79px;
+  padding-top: 20px;
+  clear: both;
+  font-size: 12px;
+  line-height: 2.5em;
+  border-top: solid 1px #ccc;
+  background-color: #eee;
+  text-align: center;
+}
+/* line 22, /app/app/assets/stylesheets/application.sass */
+#footer span, #footer img {
+  vertical-align: middle;
+}
+/* line 25, /app/app/assets/stylesheets/application.sass */
+#footer .privacy-policy {
+  font-size: 11px;
+}
+
+/* line 28, /app/app/assets/stylesheets/application.sass */
+.company-name {
+  font-size: 16px;
+}
